@@ -1,0 +1,74 @@
+/* Add this to your CSS file or a <style> tag */
+.markdown-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are merged */
+    margin: 16px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+  }
+
+/* Add borders to all table cells */
+.markdown-table th,
+.markdown-table td {
+  padding: 12px 15px;
+  border: 1px solid #444; /* Add borders to all sides of cells */
+}
+
+/* Style the table header */
+.markdown-table thead tr {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Add a bottom border to each row */
+.markdown-table tbody tr {
+  border-bottom: 1px solid #444;
+}
+
+/* Add a thicker bottom border to the last row */
+.markdown-table tbody tr:last-of-type {
+  border-bottom: 2px solid #2d2d2d;
+}
+
+pre {
+    position: relative;
+    margin: 16px 0;
+    padding: 20px 16px 16px; /* Add more padding at the top for the language comment */
+    background-color: #1e1e1e; /* Dark background for code block */
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc; /* Light text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 1px solid #333; /* Optional: Add a subtle border */
+  }
+  
+  pre code {
+    display: block;
+    color: inherit; /* Inherit text color from pre */
+    background-color: transparent; /* Ensure the code background is transparent */
+  }
+  
+  /* Style the language comment */
+  .language-comment {
+    display: block;
+    margin-bottom: 12px; /* Add space between the comment and the code */
+    font-size: 12px; /* Smaller font size for the comment */
+    color: #888; /* Lighter color for the comment */
+    font-style: italic; /* Optional: Italicize the comment */
+  }
+  
+  /* Optional: Add a top border or background to the language comment */
+  .language-comment::before {
+    content: "▹ "; /* Add a small icon or symbol before the comment */
+    color: #6a9955; /* Green color for the symbol */
+  }
+
+/* Add this to your CSS file */
+pre.hljs {
+    background-color: #1e1e1e !important;
+    color: #f8f8f2 !important;
+  }

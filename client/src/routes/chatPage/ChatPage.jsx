@@ -2,7 +2,9 @@ import "./chatPage.css";
 import NewPrompt from "../../components/newPrompt/NewPrompt";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "react-router-dom";
-import Markdown from "react-markdown";
+import ChatResponse from "../../components/chatResponse/ChatResponse";
+// import Markdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
 import { IKImage } from "imagekitio-react";
 
 const ChatPage = () => {
@@ -46,7 +48,7 @@ const ChatPage = () => {
                     }
                     key={i}
                   >
-                    <Markdown>{message.parts[0].text}</Markdown>
+                    <ChatResponse answer={message.parts[0].text} />
                   </div>
                 </>
               ))}
