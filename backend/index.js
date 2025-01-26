@@ -7,6 +7,8 @@ import url, { fileURLToPath } from "url";
 
 import chatRoute from './routes/chatRoute.js';
 import uploadRoute from './routes/uploadRoute.js';
+import chatRoute2 from './routes/chatRoute2.js';
+
 
 const port = process.env.PORT || 3000;
 const app = express();
@@ -32,7 +34,8 @@ const connect = async () => {
   }
 };
 
-app.use("/api/chats", chatRoute);
+// app.use("/api/chats", chatRoute);
+app.use("/api/chats", chatRoute2);
 app.use("/api/upload", uploadRoute);
 
 app.use((err, req, res, next) => {
